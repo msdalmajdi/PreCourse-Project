@@ -20,6 +20,10 @@
  */
 function sumOdds(numbers) {
   // Your code here
+    let sum = 0;
+    let odds = numbers.filter(number => number%2!==0);
+    odds.forEach(number => sum = sum+number);
+  return sum;
 }
 // console.log(sumOdds([3, 7, 8, 15, 2, 1, 13]));
 
@@ -38,8 +42,14 @@ function sumOdds(numbers) {
  */
 function characterCount(string, c) {
   // Your code here
+  const string1 = string.toLowerCase();
+  const bigstring = string1.split('');
+  
+  const container = bigstring.filter(character => character===c);
+  return container.length;
+  
 }
-// console.log(characterCount("Character Count is clever", "c"));
+console.log(characterCount("Character Count is clever", "c"));
 
 /**
  * largestIncrement(numbers):
