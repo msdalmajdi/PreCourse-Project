@@ -131,7 +131,7 @@ function abbreviate(firstName, lastName) {
 
 }
 
- console.log(abbreviate("miss", "Stephane"));
+ // console.log(abbreviate("miss", "Stephane"));
 
 /**
  * isUpperCase(string):
@@ -149,7 +149,7 @@ function isUpperCase(string) {
   return string === string.toUpperCase();
 }
 
-console.log(isUpperCase("JCREW"));
+// console.log(isUpperCase("JCREW"));
 
 /**
  * elementInArray(numbers, x):
@@ -163,6 +163,8 @@ console.log(isUpperCase("JCREW"));
  */
 function elementInArray(numbers, x) {
   // Your code here
+  return numbers.includes(x);
+
 }
 // console.log(elementInArray([5, 6, 7], 8));
 
