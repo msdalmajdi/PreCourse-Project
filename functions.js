@@ -105,14 +105,13 @@ function afterX(numbers, x) {
   // Your code here
   
 
-  if (numbers.includes(x)){
-    return numbers.slice(numbers.indexOf(x+1));
-  }else{
-    return numbers;
-  }
+  
+    return numbers.slice(numbers.indexOf(x)+1);
+  
+  
   
 }
- console.log(afterX([7,9,19], 9));
+ //console.log(afterX([7,9,19], 9));
 
 /**
  * abbreviate(firstName, lastName):
@@ -127,8 +126,12 @@ function afterX(numbers, x) {
  */
 function abbreviate(firstName, lastName) {
   // Your code here
+  return firstName.slice(0,1).toUpperCase() + lastName.slice(0,1).toUpperCase();
+  
+
 }
-// console.log(abbreviate("miss", "Stephane"));
+
+ console.log(abbreviate("miss", "Stephane"));
 
 /**
  * isUpperCase(string):
@@ -142,9 +145,11 @@ function abbreviate(firstName, lastName) {
  */
 function isUpperCase(string) {
   // Your code here
+
+  return string === string.toUpperCase();
 }
 
-// console.log(isUpperCase("JCREW"));
+console.log(isUpperCase("JCREW"));
 
 /**
  * elementInArray(numbers, x):
