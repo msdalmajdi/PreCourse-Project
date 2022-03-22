@@ -43,13 +43,15 @@ function sumOdds(numbers) {
 function characterCount(string, c) {
   // Your code here
   const string1 = string.toLowerCase();
+  const c1 = c.toLowerCase();
+
   const bigstring = string1.split('');
   
-  const container = bigstring.filter(character => character===c);
+  const container = bigstring.filter(character => character===c1);
   return container.length;
   
 }
-console.log(characterCount("Character Count is clever", "c"));
+//console.log(characterCount("Character Count is clever", "c"));
 
 /**
  * largestIncrement(numbers):
@@ -69,6 +71,22 @@ console.log(characterCount("Character Count is clever", "c"));
  */
 function largestIncrement(numbers) {
   // Your code here
+  let i = 0;
+  let largest = 0;
+  var difference = 0;
+  while (i <numbers.length-1){
+    difference = numbers[i+1]-numbers[i];
+    if(difference>largest){
+      largest = difference;
+    }
+    i++;
+  }
+  difference = numbers[numbers.length]-numbers[numbers.length-1];
+    if(difference>largest){
+      largest = difference;
+    }
+  
+  return largest;
 }
 // console.log(largestIncrement([11, 35, 52, 14, 56, 601, 777, 888, 999]));
 
@@ -85,8 +103,16 @@ function largestIncrement(numbers) {
  */
 function afterX(numbers, x) {
   // Your code here
+  
+
+  if (numbers.includes(x)){
+    return numbers.slice(numbers.indexOf(x+1));
+  }else{
+    return numbers;
+  }
+  
 }
-// console.log(afterX([1, 2, 3, 4, 5, 6, 7, 8, 9], 3));
+ console.log(afterX([7,9,19], 9));
 
 /**
  * abbreviate(firstName, lastName):
